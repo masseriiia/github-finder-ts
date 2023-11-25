@@ -1,0 +1,77 @@
+.hero {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ffffffff;
+}
+
+.heroWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+}
+
+.heroAvatar {
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+  margin-bottom: 23px;
+}
+
+.heroName {
+  font-weight: bolder;
+  margin-bottom: 25px;
+}
+
+.heroLogin {
+  margin-bottom: 25px;
+  color: #154cff;
+}
+
+.heroBio {
+  margin-bottom: 25px;
+}
+
+.heroFollow {
+  display: flex;
+  gap: 15px;
+}
+
+.heroFollowDesc {
+  display: flex;
+  gap: 5px;
+}
+
+.heroTitle {
+  margin-bottom: 35px;
+}
+
+.heroRepositoresItems {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.heroRepositor {
+  padding-top: 23px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 23px;
+  min-width: 900px;
+  box-shadow: 5px 7px 8px -14px rgba(34, 60, 80, 1);
+}
+
+.heroNotFound {
+  margin-top: 100px;
+  text-align: center;
+
+  img {
+    width: 70px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+}
+
+.heroRepositoresName {
+  margin-bottom: 15px;
+  color: #3f4efd;
+}

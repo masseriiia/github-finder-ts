@@ -1,0 +1,45 @@
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1180px;
+  background-color: #3f4efd;
+}
+
+.headerWrapper{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerLogo img{
+  width: 40px;
+  height: 40px;
+}
+
+.headerInput {
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.headerSearch {
+  top: 30%;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+

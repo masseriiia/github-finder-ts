@@ -10,9 +10,12 @@
     "@types/node": "^16.18.65",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
+    "axios": "^1.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-paginate": "^8.2.0",
     "react-scripts": "^5.0.1",
+    "sass": "^1.69.5",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -21,8 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext \".ts,.tsx\" \"**/*.{ts,tsx,*.ts,*tsx}\"",
-    "lint:fix": "eslint --fix --ext \".ts,.tsx\" \"**/*.{ts,tsx,*.ts,*tsx}\""
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.54.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-react-app": "^7.0.1",
