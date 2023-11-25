@@ -13,8 +13,6 @@ const Hero = () => {
   const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   const currentRepos = responseRep.slice(indexOfFirstRepo, indexOfLastRepo);
 
-  console.log(currentRepos);
-
   return (
     <section className={style.hero}>
       {!userData ? (

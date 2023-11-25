@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import axios, { AxiosInstance } from 'axios';
 import AppContext from '../components/context';
+import { useFetchData } from '../components/useFetchData';
 
 export interface IContextValue {
   userData: any;
@@ -29,6 +30,12 @@ interface UserData {
   public_repos: number;
 }
 
+const instance: AxiosInstance = axios.create({
+  baseURL: `https://api.github.com/`,
+  timeout: 1000,
+  headers: { Accept: 'application/vnd.github+json' },
+});
+
 const Home = () => {
   const [userData, setUserData] = useState<null | UserData>(null);
   const [responseRep, setResponseRep] = useState<any[]>([]);
@@ -37,33 +44,7 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [reposPerPage] = useState(7);
 
-  console.log(filteredRepos);
-
-  const instance: AxiosInstance = axios.create({
-    baseURL: `https://api.github.com/`,
-    timeout: 1000,
-    headers: { Accept: 'application/vnd.github+json' },
-  });
-
-  useEffect(() => {
-    const debounce = setTimeout(async () => {
-      try {
-        const userResponse = await instance.get(`users/${value}`);
-        setUserData(userResponse.data);
-      } catch (error) {
-        console.log(`User is not found`, error);
-      }
-
-      try {
-        const reposResponse = await instance.get(`users/${value}/repos`);
-        setResponseRep(reposResponse.data);
-      } catch (error) {
-        console.log(`User repositories not found`, error);
-      }
-    }, 0);
-
-    return () => clearTimeout(debounce);
-  }, [value]);
+  useFetchData({ value, setUserData, setResponseRep, instance });
 
   const inputValueChange = (e: any) => {
     setValue(e.target.value);
